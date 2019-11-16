@@ -1,0 +1,36 @@
+# Reference ClientA.py
+#: import main ClientA
+prmenu:
+<Button>:
+	font_size: 30
+	color:1,1,1,1
+<FloatLayout>:
+	AsyncImage:
+		source: 'back.jpg'
+		canvas:
+			Color:
+				rgba: 0.478, 0.478, 0.478,0.6
+			Rectangle:
+				pos: 430,100
+				size: 350,400
+			Rectangle:
+				pos: 50,100
+				size: 300,400
+			Rectangle:
+				pos: 385,100
+				size: 10,400
+	Label:
+		text: '217844a08b'
+		font_size: 20
+		pos: -200,0
+		size: 10,400
+	Button:
+		text:'Send'
+		size_hint: 0.3, 0.08
+		pos: 490,250
+		on_release: root.Sendscreen()
+	Button:
+		text: 'Receive'
+		size_hint: 0.3, 0.08
+		pos: 490,350
+		on_press: root.Receivescreen()

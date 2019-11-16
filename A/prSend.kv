@@ -1,0 +1,40 @@
+# Reference ClientA.py
+#: import main ClientA
+prSend:
+    sendto_text_input: sendto
+    filepath_text_input: filepathx
+    AsyncImage:
+        source: 'back.jpg'
+        canvas:
+            Color:
+                rgba: 0.478, 0.478, 0.478,0.5
+            Rectangle:
+                pos: 55,175
+                size: 700,300
+    Label:
+        id: filelabel
+        text: root.error_output
+        #text: 'root.error_output'
+        font_size: 20
+        pos: 0,-150
+        size: 10,300
+        color:1,0,0,1
+    TextInput:
+        hint_text: "sendto"
+        font_size: 30
+    	color:1,1,1,1
+        id: sendto
+        size_hint: 0.83, 0.08
+        pos: 75,400
+    TextInput:
+        hint_text: "File"
+        font_size: 30
+    	color:1,1,1,1
+        id: filepathx
+        size_hint: 0.83, 0.08
+        pos: 75,300
+    Button:
+	    text: "Send"
+        size_hint: 0.83, 0.08
+		pos: 75,200
+        on_release: root.send()

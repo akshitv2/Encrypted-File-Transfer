@@ -1,0 +1,33 @@
+# Reference ClientA.py
+#: import main ClientA
+pr2kvlogin:
+
+<Button>:
+    font_size: 30
+	color:1,1,1,1
+
+<FloatLayout>:
+    username_text_input: user_name
+    AsyncImage:
+        source: 'back.jpg'
+        canvas:
+            Color:
+                rgba: 0.478, 0.478, 0.478,0.5
+            Rectangle:
+                pos: 55,350
+                size: 700,150
+
+    TextInput:
+        hint_text: "Username"
+        font_size: 30
+    	color:1,1,1,1
+        id: user_name
+        #pos_hint: {"x": 0.15, 'y':0.85}
+        size_hint: 0.5, 0.08
+        pos: 70,400
+
+    Button:
+	    text: "Login"
+        size_hint: 0.3, 0.08
+		pos: 500,400
+        on_release: root.login()
